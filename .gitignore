@@ -1,0 +1,16 @@
+# Python caches and notebook checkpoints
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Local virtual environments
+.venv/
+venv/
+
+# Streamlit secrets, if any are ever used
+.streamlit/secrets.toml
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
