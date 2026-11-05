@@ -80,6 +80,10 @@ probabilities rather than the labels.
 | Support Vector Machine | The SVM's test MCC of 0.561 ties with logistic regression and KNN, but it has the largest train-test gap of the five: 0.658 on the training data against 0.561 on test. In 5-fold CV, though, it has the best mean MCC of all five, 0.601, and its test score is below even its weakest fold (0.574), which points to this test split being a harder draw for it rather than to a weak model. It was not grid-searched like the tree, KNN and Naive Bayes, and it is the slowest to fit, because `probability=True` makes it fit five extra internal models for Platt scaling. |
 | Overall, Winner for your dataset? | My pick is the decision tree. I judge the models mainly on MCC, because only 15.5% of sessions are purchases and MCC only goes up when a model actually finds them. The tree leads on it, 0.588 against 0.561 for logistic regression, KNN and the SVM, and it also has the best F1, 0.643. The lead comes with a caveat: the SVM has the best 5-fold CV mean at 0.601, and the tree is the most variable model across folds (standard deviation 0.041), so on another test split the gap could shrink or reverse. There is also a caveat about PageValues itself. The purchase rate is 0.563 when it is above 0 and only 0.039 when it is 0, and Google Analytics derives page value from completed transactions, so in real-time use, before a session ends, this feature may already partly contain the answer the model is meant to predict. |
 
+## Live app
+
+https://2026aj05478-ml-assignment-2.streamlit.app/
+
 ## Repository contents
 
 - `app.py` - the Streamlit app.
