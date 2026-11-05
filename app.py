@@ -71,6 +71,10 @@ st.set_page_config(
 )
 
 st.title('Online Shoppers Purchasing Intention')
+st.caption(
+    "Machine Learning (AIMLZG565), Assignment 2 | "
+    "Praveen Garg | BITS ID 2026AJ05478"
+)
 
 # The intro sits in the wider column so its lines stay readable on a wide
 # screen; the test file download sits next to it
