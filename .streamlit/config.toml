@@ -1,0 +1,4 @@
+# Blue accent for checkboxes, focus rings and buttons, to match the
+# blue confusion matrix (Streamlit's default accent is red)
+[theme]
+primaryColor = "#2171B5"
